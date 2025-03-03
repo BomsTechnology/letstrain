@@ -73,6 +73,8 @@ export default function RootLayout() {
               <Stack.Screen name="(home)" options={{headerShown: false}}/>
               <Stack.Screen name="index" options={{headerShown: false}}/>
               <Stack.Screen name="login" options={{headerShown: false}}/>
+              <Stack.Screen name="paywall" options={{headerShown: false}}/>
+              <Stack.Screen name="paywall2" options={{headerShown: false}}/>
               <Stack.Screen name="register" options={{headerShown: false}}/>
               <Stack.Screen name="quizz" options={{headerShown: false}}/>
               <Stack.Screen name="+not-found"/>

@@ -141,7 +141,7 @@ export default function Step() {
         >
           {quizzData.map((item, index) => renderQuizzPage(item, index))}
         </PagerView>
-        <XStack alignItems="center" gap={10}>
+        <XStack alignItems="center" gap={10} pb={20}>
           {currentPage > 0 && (
             <Button
               enterStyle={{ opacity: 0.5, x: 5 }}

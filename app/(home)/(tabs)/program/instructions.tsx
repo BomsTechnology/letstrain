@@ -80,7 +80,7 @@ const Instructions = () => {
                                 </YStack>
                             </XStack>
 
-                            <XStack bg="#000" p={10} pl={50} maxWidth="60%" borderTopRightRadius={30}
+                            <XStack bg="#000" p={10} pl={50} maxWidth="70%" borderTopRightRadius={30}
                                     borderBottomRightRadius={30}>
                                 <SizableText color="#fff" size="$8" fontWeight="700">INSTRUCTIONS</SizableText>
                             </XStack>

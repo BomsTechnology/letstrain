@@ -188,7 +188,7 @@ const overview = () => {
           </YStack>
         </YStack>
 
-        <Link href={{ pathname: "/(home)/(tabs)/program" }} asChild>
+        <Link href={{ pathname: "/paywall" }} asChild>
           <Button
             bg={Colors.light.red}
             borderRadius={28}
@@ -198,6 +198,7 @@ const overview = () => {
             <ButtonText color="#fff">Decouvrir mon plan</ButtonText>
           </Button>
         </Link>
+        <View h={100} />
       </ScrollView>
     </>
   );

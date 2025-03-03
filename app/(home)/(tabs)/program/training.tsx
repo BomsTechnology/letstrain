@@ -16,7 +16,8 @@ const Training = () => {
             <LinearGradient
                 colors={['#FFF4F3', '#FFFFFF']}
                 locations={[0.8, 1]}
-                style={styles.calendar}>
+                >
+                <XStack gap={5} justifyContent="center" p={10}>
                 <YStack p={8} borderRadius={15} bg={Colors.light.redDark} elevation={5} justifyContent="center"
                         alignItems="center">
                     <AntDesign name="checkcircle" size={15} color="#fff"/>
@@ -46,7 +47,8 @@ const Training = () => {
                     <View h={15} w={15} borderRadius={15} borderWidth={0.5} borderColor="#000"/>
                     <SizableText fontWeight="500" color="#000">Dim.</SizableText>
                 </YStack>
-            </LinearGradient>
+                </XStack>
+                </LinearGradient>
             <ScrollView flex={1} w="100%" showsVerticalScrollIndicator={false}>
                 <View position="relative">
                     <View w="100%"
@@ -57,7 +59,7 @@ const Training = () => {
                           bg="rgba(0,0,0,0.25)" position="absolute">
                         <SizableText
                             fontWeight="700"
-                            fontSize="$9"
+                            fontSize="$8"
                             lineHeight="$8"
                             textAlign="center"
                             color="#fff"
@@ -74,37 +76,37 @@ const Training = () => {
 
 
                 <YStack p={20} gap={15} mt={15}>
-                    <XStack w="100%" bg="#FFC8C12E" px={10} py={15} borderRadius={20}>
+                    <XStack bg="#FFC8C12E" flex={1} px={10} py={15} borderRadius={20}>
                         <YStack>
-                            <XStack gap={5} alignItems="center">
-                                <SizableText fontSize={16} fontWeight="600" color="#000">
+                            <XStack gap={5} alignItems="center" flex={1}>
+                                <SizableText fontSize="$4" fontWeight="600" color="#000">
                                     Cardio
                                 </SizableText>
-                                <XStack gap={2}>
-                                    <Fontisto name="blood-drop" size={12} color="#000"/>
-                                    <Fontisto name="blood-drop" size={12} color="#000"/>
+                                <XStack gap={2} flex={1}>
+                                    <Fontisto name="blood-drop" size={8} color="#000"/>
+                                    <Fontisto name="blood-drop" size={8} color="#000"/>
                                     <Fontisto
                                         name="blood-drop"
-                                        size={12}
+                                        size={8}
                                         color="rgba(255,255,255,0.5)"
                                     />
                                     <Fontisto
                                         name="blood-drop"
-                                        size={12}
+                                        size={8}
                                         color="rgba(255,255,255,0.5)"
                                     />
                                     <Fontisto
                                         name="blood-drop"
-                                        size={12}
+                                        size={8}
                                         color="rgba(255,255,255,0.5)"
                                     />
                                 </XStack>
                             </XStack>
-                            <XStack gap={5} alignItems="center">
-                                <SizableText fontSize={16} fontWeight="600" color="#000">
+                            <XStack gap={5} alignItems="center" flex={1}>
+                                <SizableText fontSize="$4" fontWeight="600" color="#000">
                                     Musculation
                                 </SizableText>
-                                <XStack gap={2}>
+                                <XStack gap={2} flex={1}>
                                     <Fontisto name="star" size={11} color="#000"/>
                                     <Fontisto name="star" size={11} color="#000"/>
                                     <Fontisto name="star" size={11} color="#000"/>
@@ -115,23 +117,24 @@ const Training = () => {
                         </YStack>
                         <YStack>
                             <XStack gap={5} alignItems="center">
-                                <SizableText fontSize={16} fontWeight="600" color="#000">
+                                <SizableText fontSize="$4" fontWeight="600" color="#000">
                                     Nombre de séance :
                                 </SizableText>
-                                <SizableText fontSize={16} fontWeight="600" color="#00000050">
+                                <SizableText fontSize="$4" fontWeight="600" color="#00000050">
                                     XX
                                 </SizableText>
                             </XStack>
                             <XStack gap={5} alignItems="center">
-                                <SizableText fontSize={16} fontWeight="600" color="#000">
+                                <SizableText fontSize="$4" fontWeight="600" color="#000">
                                     Durée totale :
                                 </SizableText>
-                                <SizableText fontSize={16} fontWeight="600" color="#00000050">
+                                <SizableText fontSize="$4" fontWeight="600" color="#00000050">
                                     4 semaines
                                 </SizableText>
                             </XStack>
                         </YStack>
                     </XStack>
+
                     <YStack w="100%" gap={15} p={20} borderRadius={20}>
                         <XStack gap={8} alignItems="center">
                             <Ionicons name="home" size={20} color={Colors.light.redDark}/>
@@ -163,43 +166,43 @@ const Training = () => {
                     </LinearGradient>
                     <YStack gap={5}>
                         <XStack bg={Colors.light.red} p={15} borderRadius={20} alignItems="center"
-                                justifyContent="space-between">
-                            <XStack alignItems="center" gap={20}>
-                                <View h={40} w={40} borderRadius={20} bg="#fff" justifyContent="center"
+                                justifyContent="space-between" flex={1}>
+                            <XStack alignItems="center" gap={10} flex={1}>
+                                <View h={30} w={30} borderRadius={20} bg="#fff" justifyContent="center"
                                       alignItems="center">
-                                    <SizableText fontSize="$8"
-                                                 lineHeight="$8" fontWeight="700">1</SizableText>
+                                    <SizableText fontSize="$5"
+                                                  fontWeight="700">1</SizableText>
                                 </View>
-                                <XStack gap={5}>
-                                    <SizableText color="#fff" fontSize="$7"
+                                <XStack gap={5} flex={1} maxWidth="80%">
+                                    <SizableText color="#fff" fontSize="$6"
                                                  lineHeight="$8" fontWeight="700"
                                                  numberOfLines={1}>ECHAUFFEMENT</SizableText>
-                                    <SizableText color="#fff" fontSize="$7"
+                                    <SizableText color="#fff" fontSize="$5"
                                                  lineHeight="$8" fontWeight="500">5-10min</SizableText>
                                 </XStack>
                             </XStack>
-                            <View h={40} w={40} borderRadius={20} bg={Colors.light.redDark} justifyContent="center"
+                            <View  h={30} w={30} borderRadius={20} bg={Colors.light.redDark} justifyContent="center"
                                   alignItems="center">
-                                <Ionicons name="play" size={20} color={Colors.light.background}/>
+                                <Ionicons name="play" size={15} color={Colors.light.background}/>
                             </View>
                         </XStack>
                         <XStack bg="#EFEFEF" p={15} borderRadius={20} alignItems="center"
                                 justifyContent="space-between">
-                            <XStack alignItems="center" gap={20}>
-                                <View h={40} w={40} borderRadius={20} bg="#000" justifyContent="center"
+                            <XStack alignItems="center" gap={10}>
+                                <View h={30} w={30} borderRadius={20} bg="#000" justifyContent="center"
                                       alignItems="center">
-                                    <SizableText fontSize="$8"
+                                    <SizableText fontSize="$5"
                                                  lineHeight="$8" color="#fff" fontWeight="700">2</SizableText>
                                 </View>
                                 <YStack>
-                                    <SizableText color="#000" fontSize="$7"
+                                    <SizableText color="#000" fontSize="$6"
                                                  lineHeight="$1" fontWeight="700"
                                                  numberOfLines={1}>RECUPERATION</SizableText>
-                                    <SizableText color="#888888" fontSize="$6"
+                                    <SizableText color="#888888" fontSize="$5"
                                                  lineHeight="$1" fontWeight="500">5-10min</SizableText>
                                 </YStack>
                             </XStack>
-                            <SizableText color="#000" fontSize="$7"
+                            <SizableText color="#000" fontSize="$6"
                                          lineHeight="$1" fontWeight="500">X-Xmin</SizableText>
                         </XStack>
                     </YStack>
@@ -340,14 +343,6 @@ const Training = () => {
 export default Training;
 
 const styles = StyleSheet.create({
-    calendar: {
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
-        gap: 10,
-        padding: 10,
-    },
     point: {
         width: '100%',
         justifyContent: 'flex-start',

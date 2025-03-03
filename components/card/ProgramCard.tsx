@@ -86,7 +86,8 @@ const ProgramCard = ({images, title, description, programTitle}: ProgramCardProp
                         alignItems="flex-end"
                         px={20}
                         zIndex={1}
-                        w="100%"
+                        flex={1}
+                        gap={5}
                     >
                         <YStack>
                             <SizableText fontSize="$6" fontWeight="600" color="#fff" lineHeight="$7" textAlign="left">

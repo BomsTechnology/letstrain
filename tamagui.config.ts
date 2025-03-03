@@ -98,7 +98,7 @@ export const Button = styled(YStack, {
 
 export const ButtonText = styled(SizableText, {
   color: '#FFFFFF',
-  fontSize: 16,
+  fontSize: "$5",
   fontWeight: '600',
   textAlign: 'center',
 });

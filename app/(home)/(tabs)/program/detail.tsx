@@ -4,6 +4,7 @@ import {Fontisto, Ionicons, AntDesign, FontAwesome} from "@expo/vector-icons";
 import {Colors} from "@/constants/Colors";
 import {AlertDialogDemo} from "@/components/modal/SomeDialog";
 import {useRouter} from "expo-router";
+import React from "react";
 
 const ProgramDetail = () => {
     const router = useRouter();
@@ -19,65 +20,66 @@ const ProgramDetail = () => {
             <YStack p={20}>
                 <SizableText
                     fontWeight="700"
-                    fontSize="$9"
+                    fontSize="$8"
                     lineHeight="$8"
-                    textAlign="left"
+                    textAlign="center"
                 >
                     Je garde mes formes
                 </SizableText>
-                <XStack bg="#FFC8C12E" px={10} py={15} borderRadius={20} mt={15}>
+                <XStack bg="#FFC8C12E" mt={15}
+                        justifyContent="space-between" flex={1} px={10} py={15} borderRadius={20}>
                     <YStack>
-                        <XStack gap={5} alignItems="center">
-                            <SizableText fontSize={16} fontWeight="600" color="#000">
+                        <XStack gap={5} flex={1} alignItems="center" >
+                            <SizableText fontSize="$2" fontWeight="600" color="#000">
                                 Cardio
                             </SizableText>
-                            <XStack gap={2}>
-                                <Fontisto name="blood-drop" size={12} color="#000"/>
-                                <Fontisto name="blood-drop" size={12} color="#000"/>
+                            <XStack gap={2} flex={1}>
+                                <Fontisto name="blood-drop" size={8} color="#000"/>
+                                <Fontisto name="blood-drop" size={8} color="#000"/>
                                 <Fontisto
                                     name="blood-drop"
-                                    size={12}
+                                    size={8}
                                     color="rgba(255,255,255,0.5)"
                                 />
                                 <Fontisto
                                     name="blood-drop"
-                                    size={12}
+                                    size={8}
                                     color="rgba(255,255,255,0.5)"
                                 />
                                 <Fontisto
                                     name="blood-drop"
-                                    size={12}
+                                    size={8}
                                     color="rgba(255,255,255,0.5)"
                                 />
                             </XStack>
                         </XStack>
-                        <XStack gap={5} alignItems="center">
-                            <SizableText fontSize={16} fontWeight="600" color="#000">
+                        <XStack gap={5} alignItems="center" flex={1}>
+                            <SizableText fontSize="$2" fontWeight="600" color="#000">
                                 Musculation
                             </SizableText>
                             <XStack gap={2}>
-                                <Fontisto name="star" size={11} color="#000"/>
-                                <Fontisto name="star" size={11} color="#000"/>
-                                <Fontisto name="star" size={11} color="#000"/>
-                                <Fontisto name="star" size={11} color="rgba(255,255,255,0.5)"/>
-                                <Fontisto name="star" size={11} color="rgba(255,255,255,0.5)"/>
+                                <Fontisto name="star" size={8} color="#000"/>
+                                <Fontisto name="star" size={8} color="#000"/>
+                                <Fontisto name="star" size={8} color="#000"/>
+                                <Fontisto name="star" size={8} color="rgba(255,255,255,1)"/>
+                                <Fontisto name="star" size={8} color="rgba(255,255,255,1)"/>
                             </XStack>
                         </XStack>
                     </YStack>
                     <YStack>
-                        <XStack gap={5} alignItems="center">
-                            <SizableText fontSize={16} fontWeight="600" color="#000">
+                        <XStack gap={5} alignItems="center" flex={1}>
+                            <SizableText fontSize="$2" fontWeight="600" color="#000">
                                 Nombre de séance :
                             </SizableText>
-                            <SizableText fontSize={16} fontWeight="600" color="#00000050">
+                            <SizableText fontSize="$2" fontWeight="600" color="#00000050">
                                 XX
                             </SizableText>
                         </XStack>
-                        <XStack gap={5} alignItems="center">
-                            <SizableText fontSize={16} fontWeight="600" color="#000">
+                        <XStack gap={5} alignItems="center" flex={1}>
+                            <SizableText fontSize="$2" fontWeight="600" color="#000">
                                 Durée totale :
                             </SizableText>
-                            <SizableText fontSize={16} fontWeight="600" color="#00000050">
+                            <SizableText fontSize="$2" fontWeight="600" color="#00000050">
                                 4 semaines
                             </SizableText>
                         </XStack>

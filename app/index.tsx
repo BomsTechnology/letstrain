@@ -1,12 +1,12 @@
-import { YStack, XStack, SizableText } from "tamagui";
-import { LinearGradient } from "expo-linear-gradient";
-import { StyleSheet, ImageBackground, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { YStack, XStack, Button, View } from "tamagui";
+import { StyleSheet, Image } from "react-native";
+import { useSafeAreaInsets} from "react-native-safe-area-context";
 import { Colors } from "@/constants/Colors";
-import { Button, ButtonText } from "@/tamagui.config";
+import { ButtonText } from "@/tamagui.config";
 import PagerView from "react-native-pager-view";
 import { useRef, useState } from "react";
 import { Link } from "expo-router";
+import OnboardingPage from "@/components/onboarding/OnboardingPage";
 
 const datas = [
   {
@@ -57,22 +57,37 @@ const datas = [
 
 const Page = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const {top, bottom} = useSafeAreaInsets()
   const pageRef = useRef<PagerView>(null);
   return (
-    <ImageBackground source={datas[currentPage].image} style={{ flex: 1 }}>
-      <LinearGradient
-        colors={[
-          "transparent",
-          "rgba(255,255,255, 0.3)",
-          "rgb(255,255,255)",
-          "rgb(255,255,255)",
-        ]}
-        style={[StyleSheet.absoluteFillObject]}
-      />
-      <SafeAreaView style={{ flex: 1, padding: 24 }}>
-        <XStack justifyContent="center">
+
+      <YStack position="relative" flex={1}>
+        <XStack justifyContent="center" position="absolute" zIndex={10}
+                top={top + 20}
+                left="50%"
+                transform={[{translateX: '-50%'}]}
+                >
           <Image source={require("@/assets/images/logo.png")} />
         </XStack>
+        <YStack maxWidth="90%" transform={[{translateX: '-50%'}]} left="50%" mx="auto" gap={5} position="absolute" bottom={bottom + 20} px={20} zIndex={10} width="100%">
+          <XStack mb={10} justifyContent="center" px={10} alignItems="center" gap={5}>
+            {datas.map((item, index) => (
+                <View flex={1} key={index} bg={currentPage === index ? Colors.light.black :'#888888' } width={5} h={3}></View>
+            ))}
+          </XStack>
+          <Link href={{ pathname: "/quizz" }} asChild>
+            <Button borderRadius={30} bg={Colors.light.black} shadowOpacity={0}>
+              <ButtonText>Decouvrir</ButtonText>
+            </Button>
+          </Link>
+          <Link href={{ pathname: "/login" }} asChild>
+            <Button bg="#fff" borderRadius={30}  shadowOpacity={0} borderWidth={1} borderColor="#000">
+              <ButtonText color={Colors.light.black}>
+                J'ai déjà un compte
+              </ButtonText>
+            </Button>
+          </Link>
+        </YStack>
         <PagerView
           ref={pageRef}
           overScrollMode="auto"
@@ -81,57 +96,20 @@ const Page = () => {
           onPageScroll={(e) => setCurrentPage(e.nativeEvent.position)}
         >
           {datas.map((item, index) => (
-
-            <YStack flex={1} justifyContent="flex-end" key={item.id}>
-              <SizableText fontSize={22} fontWeight="500" color="#000" mx={10}>
-                {item.title}
-              </SizableText>
-              <XStack
-                bg={item.color}
-                px={8}
-                py={4}
-                borderRadius={20}
-                alignSelf="flex-start"
-              >
-                <SizableText fontSize={22} fontWeight="500" color="#fff">
-                  {item.subtitle}
-                </SizableText>
-              </XStack>
-              <SizableText fontWeight="400" fontSize={16} mt={10}>
-                {item.description}
-              </SizableText>
-            </YStack>
+              <OnboardingPage key={item.id} image={item.image} title={item.title} color={item.color} subtitle={item.subtitle} description={item.description} />
           ))}
         </PagerView>
-        <XStack my={20} justifyContent="center" gap={5} alignItems="center">
-          {datas.map((item, index) => (
-            <XStack
-              h={3}
-              borderRadius={5}
-              minWidth={30}
-              maxWidth={50}
-              bg={currentPage === index ? Colors.light.black : "#888888"}
-              key={item.id}
-            />
-          ))}
-        </XStack>
-        <YStack gap={15}>
-          <Link href={{ pathname: "/login" }} asChild>
-            <Button bg={Colors.light.black} shadowOpacity={0}>
-              <ButtonText>Decouvrir</ButtonText>
-            </Button>
-          </Link>
-          <Link href={{ pathname: "/login" }} asChild>
-            <Button bg="#fff"  shadowOpacity={0} borderWidth={1}>
-              <ButtonText color={Colors.light.black}>
-                J'ai déjà un compte
-              </ButtonText>
-            </Button>
-          </Link>
-        </YStack>
-      </SafeAreaView>
-    </ImageBackground>
+
+      </YStack>
   );
 };
 
 export default Page;
+
+const styles = StyleSheet.create({
+  logo: {
+
+  }
+})
+
+

@@ -132,6 +132,7 @@ const result = () => {
         {renderItem("Adaptation du plan à tes disponibilités", progress >= 5)}
         {renderItem("Creation de ton espace personnel", progress >= 7)}
       </YStack>
+      <View h={100} />
     </ScrollView>
   );
 };
