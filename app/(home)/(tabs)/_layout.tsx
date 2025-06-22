@@ -21,7 +21,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="myday"
         options={{
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'document-text' : 'document-text-outline'} color={color} />

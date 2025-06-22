@@ -30,7 +30,7 @@ const FoodCard = () => {
                 px={15}
                 gap={10}
             >
-                <YStack w="55%" borderRadius={20} bg={Colors.light.greenDark}  position="relative" overflow="hidden">
+                <YStack flex={1} borderRadius={20} bg={Colors.light.greenDark}  position="relative" overflow="hidden">
                     <YStack
                         position="absolute"
                         justifyContent="space-between"
@@ -64,11 +64,11 @@ const FoodCard = () => {
                         style={{width: "100%", height: "100%"}}
                     />
                 </YStack>
-                <YStack w="45%" borderRadius={20} bg={Colors.light.greenDark} p={15}>
+                <YStack flex={1} borderRadius={20} bg={Colors.light.greenDark} p={15}>
                     <MaterialCommunityIcons name="silverware-fork-knife" size={30} color={Colors.light.greenLight} />
                     <SizableText
                         fontWeight="800"
-                        fontSize="$9"
+                        fontSize="$8"
                         lineHeight="$6"
                         textAlign="left"
                         color={Colors.light.greenLight}
@@ -77,7 +77,7 @@ const FoodCard = () => {
                     </SizableText>
                     <SizableText
                         fontWeight="800"
-                        fontSize="$9"
+                        fontSize="$8"
                         lineHeight="$6"
                         textAlign="left"
                         mb={15}
@@ -86,8 +86,8 @@ const FoodCard = () => {
                         recettes
                         saines.
                     </SizableText>
-                    <Button bg="#FFF" borderRadius={28} >
-                        <SizableText fontWeight="700" color={Colors.light.greenDark} fontSize={18}>
+                    <Button bg="#FFF" flex={1} borderRadius={28} >
+                        <SizableText textAlign="center" flex={1} fontWeight="700" color={Colors.light.greenDark} fontSize={16}>
                             Decouvrir
                         </SizableText>
                     </Button>

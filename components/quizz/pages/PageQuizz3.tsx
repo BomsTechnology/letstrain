@@ -1,4 +1,4 @@
-import {H3, ScrollView, Separator, SizableText, YStack} from "tamagui";
+import {H3, ScrollView, Separator, SizableText, View, YStack} from "tamagui";
 import {InputQuizz} from "@/components/quizz/inputs/InputQuizz";
 import {PageQuizzProps} from "@/types/QuizzProps";
 import RenderInputQuizz from "@/components/quizz/inputs/RenderInputQuizz";
@@ -22,7 +22,7 @@ export default function PageQuizz3({
                             flexDirection={question.questionType === "Question3" ? "row" : "column"}
                             value={value}>
                     {question.questions.map((quest, i) =>
-                        <RenderInputQuizz onPress={setValue} index={index} key={i} multiple={question.multiple} type={question.questionType} question={quest}/>
+                        <RenderInputQuizz multipleAmount={question.multipleAmount} onPress={setValue} index={index} key={i} multiple={question.multiple} type={question.questionType} question={quest}/>
                     )
                     }
                 </InputQuizz>
@@ -37,7 +37,7 @@ export default function PageQuizz3({
                     >{question.quoteAuthor}</SizableText>
                 }
             </YStack>
-
+            <View h={50}/>
         </ScrollView>
     );
 }

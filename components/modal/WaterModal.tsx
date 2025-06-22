@@ -1,16 +1,16 @@
 import { Image } from "react-native";
 import { AlertDialog, Button, SizableText, XStack, YStack } from "tamagui";
 import Input from "../form/Input";
-import { useState } from "react";
+import React, { useState } from "react";
+import {Colors} from "@/constants/Colors";
+import {Ionicons} from "@expo/vector-icons";
 
 const ForgotPasswordModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialog.Trigger asChild>
-        <SizableText textAlign="center" mt={15} color="#fff" fontWeight="500">
-          Mot de passe oublié ?
-        </SizableText>
+        <Ionicons name="add-circle-outline" size={30} color={Colors.light.blueDark}/>
       </AlertDialog.Trigger>
 
       <AlertDialog.Portal>
@@ -21,6 +21,7 @@ const ForgotPasswordModal = () => {
           enterStyle={{ opacity: 0 }}
           exitStyle={{ opacity: 0 }}
           onPress={() => setIsOpen(false)}
+          zIndex={99999}
         />
         <AlertDialog.Content
           bordered
@@ -55,14 +56,12 @@ const ForgotPasswordModal = () => {
             </AlertDialog.Description>
 
             <YStack>
-<XStack>
               <Input
                 icon={{ name: "mail-outline", color: "#000" }}
                 placeholder="Email"
                 containerProps={{ bg: "#B3B3B350", my: 18 }}
                 placeholderTextColor="#000"
               />
-</XStack>
               <AlertDialog.Action asChild w="100%">
                 <Button bg="#000" borderRadius={28} size="$5">
                   <SizableText fontWeight="500" color="#fff" fontSize={16}>

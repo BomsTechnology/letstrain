@@ -18,7 +18,7 @@ const Instructions = () => {
                     source={require("@/assets/images/program/instruction.png")}
                     style={{width: '100%', flex: 1}}
                 />
-                <ScrollView top={20} position="absolute" maxHeight="70%"
+                <ScrollView top={20} position="absolute" maxHeight="90%"
                             right={20} showsVerticalScrollIndicator={false}>
                     {
                         exercises.map((exercise, index) => (
@@ -35,13 +35,11 @@ const Instructions = () => {
                 >
                     <Ionicons name="arrow-back" size={30} color="#fff"/>
                 </XStack>
+                <XStack bottom={20} flex={1}  w="100%"
+                        position="absolute" justifyContent="center" alignItems="center">
                 <Button
                     bg="#FFF"
-                    bottom={20}
-                    position="absolute"
                     maxWidth="70%"
-                    transform={`translate(-50%, 0)`}
-                    left="50%"
                     w="100%"
                     onPress={() => setOpen(true)}
                     borderRadius={40} px={8} size="$5" borderWidth={2} borderColor="#888888"
@@ -50,6 +48,7 @@ const Instructions = () => {
                         INSTRUCTIONS
                     </SizableText>
                 </Button>
+                </XStack>
             </YStack>
             <Sheet modal snapPoints={[80]} dismissOnSnapToBottom
                    open={open}
@@ -87,7 +86,7 @@ const Instructions = () => {
 
                             <YStack mt={20}>
                                 {Array.from({length: 6}).map((_, i) => (
-                                    <XStack borderColor={Colors.light.green} py={10}  px={20}
+                                    <XStack key={i!} borderColor={Colors.light.green} py={10}  px={20}
                                             justifyContent="flex-start" alignItems="flex-start" gap={10}>
                                         <View h={30} w={30} borderRadius={20} justifyContent="center"
                                               alignItems="center" bg="#000">

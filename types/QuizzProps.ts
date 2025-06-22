@@ -7,6 +7,7 @@ export type InputQuizz  = {
     value?: string[],
     setValue?: Function;
     multiple?: boolean,
+    multipleAmount?: number,
 }
 
 export type InputQuizzProps = PropsWithChildren & InputQuizz & ViewProps;

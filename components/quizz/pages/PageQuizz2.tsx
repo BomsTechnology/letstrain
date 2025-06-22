@@ -1,4 +1,4 @@
-import { H3, Image, ScrollView, Separator, SizableText, XStack} from "tamagui";
+import {H3, Image, ScrollView, Separator, SizableText, View, XStack} from "tamagui";
 import {InputQuizz} from "@/components/quizz/inputs/InputQuizz";
 import {PageQuizzProps} from "@/types/QuizzProps";
 import RenderInputQuizz from "@/components/quizz/inputs/RenderInputQuizz";
@@ -20,7 +20,7 @@ export default function PageQuizz2({
                             value={value}
                             setValue={setValue}>
                     {question.questions.map((quest, i) =>
-                        <RenderInputQuizz onPress={setValue} index={index} multiple={question.multiple} key={i} type={question.questionType} question={quest}/>
+                        <RenderInputQuizz onPress={setValue} index={index} multiple={question.multiple} multipleAmount={question.multipleAmount} key={i} type={question.questionType} question={quest}/>
                     )
                     }
                 </InputQuizz>
@@ -30,6 +30,7 @@ export default function PageQuizz2({
             {question.image && <XStack justifyContent="center" mx="auto" mt={30} h={180} overflow="hidden" borderRadius={20} w={280}>
                 <Image source={question.image} style={{ height: "100%", width: "100%" }}/>
             </XStack>}
+            <View h={50}/>
         </ScrollView>
     );
 }

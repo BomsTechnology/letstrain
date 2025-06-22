@@ -46,16 +46,19 @@ export default function Step() {
     setSelectedValue(initialValues);
   }, []);
 
-  const handleSelected = (index: number, value: string, multiple: boolean) => {
+  const handleSelected = (index: number, value: string, multiple: boolean, multipleAmount?: number) => {
     const values = [...selectedValue];
     if (multiple) {
       const i = values[index].answers.indexOf(value);
       if (i !== -1) {
         values[index] = {
           ...values[index],
-          answers: values[index].answers.splice(1, i),
+          answers :values[index].answers.filter((_, idx) => idx !== i),
         };
       } else {
+        if(multipleAmount && values[index].answers.length >= multipleAmount) {
+          return;
+        }
         values[index] = {
           ...values[index],
           answers: [...values[index].answers, value],

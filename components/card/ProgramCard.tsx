@@ -22,13 +22,13 @@ const ProgramCard = ({images, title, description, programTitle}: ProgramCardProp
         <YStack>
             <SizableText
                 fontWeight="600"
-                fontSize="$9"
+                fontSize="$8"
                 lineHeight="$8"
                 textAlign="center"
             >
                 {title}
             </SizableText>
-            <SizableText fontSize="$7" lineHeight="$8" textAlign="center" mb={10}>
+            <SizableText fontSize="$6" lineHeight="$8" textAlign="center" mb={10}>
                 {description}
             </SizableText>
             <PagerView
@@ -87,46 +87,46 @@ const ProgramCard = ({images, title, description, programTitle}: ProgramCardProp
                         px={20}
                         zIndex={1}
                         flex={1}
-                        gap={5}
+                        gap={10}
                     >
                         <YStack>
-                            <SizableText fontSize="$6" fontWeight="600" color="#fff" lineHeight="$7" textAlign="left">
+                            <SizableText fontSize="$5" fontWeight="600" color="#fff" lineHeight="$7" textAlign="left">
                                 {programTitle}
                             </SizableText>
                             <XStack gap={5} alignItems="center">
-                                <SizableText fontSize={16} fontWeight="600" color="#fff">
+                                <SizableText fontSize={14} fontWeight="600" color="#fff">
                                     Cardio
                                 </SizableText>
                                 <XStack gap={2}>
-                                    <Fontisto name="blood-drop" size={12} color="#fff"/>
-                                    <Fontisto name="blood-drop" size={12} color="#fff"/>
+                                    <Fontisto name="blood-drop" size={10} color="#fff"/>
+                                    <Fontisto name="blood-drop" size={10} color="#fff"/>
                                     <Fontisto
                                         name="blood-drop"
-                                        size={12}
+                                        size={10}
                                         color="rgba(255,255,255,0.5)"
                                     />
                                     <Fontisto
                                         name="blood-drop"
-                                        size={12}
+                                        size={10}
                                         color="rgba(255,255,255,0.5)"
                                     />
                                     <Fontisto
                                         name="blood-drop"
-                                        size={12}
+                                        size={10}
                                         color="rgba(255,255,255,0.5)"
                                     />
                                 </XStack>
                             </XStack>
                             <XStack gap={5} alignItems="center">
-                                <SizableText fontSize={16} fontWeight="600" color="#fff">
+                                <SizableText fontSize={14} fontWeight="600" color="#fff">
                                     Musculation
                                 </SizableText>
                                 <XStack gap={2}>
-                                    <Fontisto name="star" size={11} color="#fff"/>
-                                    <Fontisto name="star" size={11} color="#fff"/>
-                                    <Fontisto name="star" size={11} color="#fff"/>
-                                    <Fontisto name="star" size={11} color="rgba(255,255,255,0.5)"/>
-                                    <Fontisto name="star" size={11} color="rgba(255,255,255,0.5)"/>
+                                    <Fontisto name="star" size={9} color="#fff"/>
+                                    <Fontisto name="star" size={9} color="#fff"/>
+                                    <Fontisto name="star" size={9} color="#fff"/>
+                                    <Fontisto name="star" size={9} color="rgba(255,255,255,0.5)"/>
+                                    <Fontisto name="star" size={9} color="rgba(255,255,255,0.5)"/>
                                 </XStack>
                             </XStack>
                         </YStack>

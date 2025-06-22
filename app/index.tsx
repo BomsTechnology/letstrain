@@ -64,12 +64,11 @@ const Page = () => {
       <YStack position="relative" flex={1}>
         <XStack justifyContent="center" position="absolute" zIndex={10}
                 top={top + 20}
-                left="50%"
-                transform={[{translateX: '-50%'}]}
+                width="100%"
                 >
           <Image source={require("@/assets/images/logo.png")} />
         </XStack>
-        <YStack maxWidth="90%" transform={[{translateX: '-50%'}]} left="50%" mx="auto" gap={5} position="absolute" bottom={bottom + 20} px={20} zIndex={10} width="100%">
+        <YStack width="100%" gap={5} position="absolute" bottom={bottom + 20} px={20} zIndex={10} >
           <XStack mb={10} justifyContent="center" px={10} alignItems="center" gap={5}>
             {datas.map((item, index) => (
                 <View flex={1} key={index} bg={currentPage === index ? Colors.light.black :'#888888' } width={5} h={3}></View>

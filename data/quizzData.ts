@@ -12,7 +12,8 @@ export type QuizzDataProps = {
     image?: ImageSourcePropType;
     quote?: string;
     quoteAuthor?: string;
-    multiple: boolean
+    multiple: boolean;
+    multipleAmount?: number,
 }
 
 const quizzData: QuizzDataProps[] = [
@@ -296,6 +297,7 @@ const quizzData: QuizzDataProps[] = [
         pageType: 'Page1',
         questionType: 'Question5',
         title: 'Quelles jours de la semaines préfères-tu t’entraîner ?',
+        multipleAmount: 5,
         questions: [
             {
                 id: 'question11-resp-1',

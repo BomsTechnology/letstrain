@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "@/constants/Colors";
-import { H2, Button, SizableText, YStack, Separator } from "tamagui";
+import {H2, Button, SizableText, YStack, Separator, XStack} from "tamagui";
 import Input from "@/components/form/Input";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Link } from "expo-router";
@@ -29,9 +29,12 @@ const LoginPage = () => {
         <SizableText fontSize={18} mt={20} textAlign="center" color="#fff">
           Lorem ipsum dolor sit amet.
         </SizableText>
-        <YStack mt={30} gap={10}>
-          <Input icon={{ name: "mail-outline" }} placeholder="Email" color="#fff"
+        <YStack mt={30} gap={10} >
+          <XStack>
+          <Input icon={{ name: "mail-outline", size: 20 }} placeholder="Email" color="#fff"
                  placeholderTextColor="#fff" />
+          </XStack>
+          <XStack>
           <Input
             eyeBtn
             icon={{ name: "lock-closed-outline" }}
@@ -39,6 +42,7 @@ const LoginPage = () => {
             color="#fff"
             placeholderTextColor="#fff"
           />
+          </XStack>
         </YStack>
         <ForgotPasswordModal />
         <Link href={{ pathname: "/(home)/(tabs)/program" }} asChild>

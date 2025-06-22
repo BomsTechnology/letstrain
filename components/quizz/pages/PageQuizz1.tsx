@@ -1,4 +1,4 @@
-import {H3, Image, ScrollView, XStack} from "tamagui";
+import {H3, Image, ScrollView, XStack, View} from "tamagui";
 import {InputQuizz} from "@/components/quizz/inputs/InputQuizz";
 import {PageQuizzProps} from "@/types/QuizzProps";
 import RenderInputQuizz from "@/components/quizz/inputs/RenderInputQuizz";
@@ -21,11 +21,12 @@ export default function PageQuizz1({
                             value={value}
                             >
                     {question.questions.map((quest, i) =>
-                        <RenderInputQuizz onPress={setValue} index={index} key={i} multiple={question.multiple} type={question.questionType} question={quest}/>
+                        <RenderInputQuizz onPress={setValue} index={index} key={i} multiple={question.multiple} multipleAmount={question.multipleAmount} type={question.questionType} question={quest}/>
                     )
                     }
                 </InputQuizz>
             }
+            <View h={50}/>
         </ScrollView>
     );
 }

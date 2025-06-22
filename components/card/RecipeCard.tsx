@@ -13,14 +13,14 @@ const RecipeCard = () => {
                 <SizableText color={Colors.light.greenDark} size="$6" fontWeight={700}>Petit déjeuner</SizableText>
                 <Ionicons name="heart-outline" size={22} color="#888888"/>
             </XStack>
-            <XStack justifyContent="space-between" gap={10} alignItems="center">
-                <XStack alignItems="center" gap={20}>
+            <XStack flex={1} justifyContent="space-between" gap={10} alignItems="center">
+                <XStack flex={1} alignItems="center" gap={20}>
                     <Image
                         resizeMode="cover"
                         source={require("@/assets/images/recipe/2.png")}
                         style={{width: 130, height: 110, borderRadius: 20}}
                     />
-                    <YStack>
+                    <YStack flex={1}>
                         <SizableText color={Colors.light.black} size="$6" mb={10} numberOfLines={1} fontWeight={700}>Lorem ipsum</SizableText>
                         <XStack alignItems="center" gap={5}>
                             <MaterialCommunityIcons name="silverware-fork-knife" mb={10} size={20} color={Colors.light.green}/>

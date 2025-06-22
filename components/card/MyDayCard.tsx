@@ -6,7 +6,7 @@ import Fontisto from "@expo/vector-icons/Fontisto";
 import { Colors } from "../../constants/Colors";
 import { ButtonText } from "@/tamagui.config";
 
-const AIRecommandationCard = () => {
+const MyDayCard = () => {
   return (
     <YStack
       bg={Colors.light.redLight}
@@ -14,13 +14,24 @@ const AIRecommandationCard = () => {
       borderRadius={20}
       alignItems="center"
     >
+      <XStack zIndex={50} bg={Colors.light.red} px={12} py={6} borderRadius={20}>
+        <SizableText
+            fontSize={14}
+            fontWeight="700"
+            color="#fff"
+            textAlign="center"
+        >
+          SEANCE DU JOUR
+        </SizableText>
+      </XStack>
       <XStack
         justifyContent="center"
         borderRadius={20}
-        h={300}
+        h={200}
         position="relative"
         overflow="hidden"
         mx={5}
+        mt={-15}
         borderWidth={1}
         flex={1}
         borderColor={Colors.light.redDark}
@@ -33,28 +44,14 @@ const AIRecommandationCard = () => {
           h="100%"
           zIndex={1}
           bg="rgba(0,0,0,0.25)"
-        />
-        <XStack
-          position="absolute"
-          zIndex={1}
-          py={2}
-          pl={12}
-          borderTopLeftRadius={15}
-          borderBottomLeftRadius={15}
-          pr={8}
-          right={0}
-          top={20}
-          gap={5}
-          bg="#000"
-          alignItems="center"
         >
-          <FontAwesome6 name="clock-rotate-left" size={14} color="#fff" />
-          <SizableText color="#fff">4 semaines</SizableText>
-        </XStack>
+          <SizableText fontSize="$8" maxWidth="90%" fontWeight="700" textAlign="center" color="#fff">Perte de masse grasse</SizableText>
+        </View>
+
         <Image
-          resizeMode="cover"
-          source={require("@/assets/images/quizz/overview.png")}
-          style={{ width: "100%", height: "100%" }}
+            resizeMode="cover"
+            source={require("@/assets/images/quizz/overview.png")}
+            style={{ width: "100%", height: "100%" }}
         />
         <XStack position="absolute" flex={1} gap={5}  bottom={30} justifyContent="space-between" px={20} zIndex={1}>
           <XStack gap={5} flex={1}  alignItems="center">
@@ -98,22 +95,12 @@ const AIRecommandationCard = () => {
       <YStack
         gap={5}
         maxWidth="87%"
-        mt={-20}
+        mt={5}
         justifyContent="center"
         alignItems="center"
       >
         
-        <XStack w="100%" bg={Colors.light.red} p={10} borderRadius={20}>
-          <SizableText
-            w="100%"
-            fontSize={16}
-            fontWeight="600"
-            color="#fff"
-            textAlign="center"
-          >
-            Recommandation de l’IA
-          </SizableText>
-        </XStack>
+
         <SizableText textAlign="center">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.
         </SizableText>
@@ -132,4 +119,4 @@ const AIRecommandationCard = () => {
   );
 };
 
-export default AIRecommandationCard;
+export default MyDayCard;

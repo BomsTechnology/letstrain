@@ -28,13 +28,14 @@ const MindsetCard = () => {
                 bg={Colors.light.blueLight}
                 py={10}
                 px={15}
+                flex={1}
                 gap={10}
             >
-                <YStack w="50%" borderRadius={20} bg={Colors.light.blueDark} p={15}>
+                <YStack flex={1} borderRadius={20} bg={Colors.light.blueDark} p={15}>
                     <Ionicons name="cloud" size={30} color={Colors.light.blueLight} />
                     <SizableText
                         fontWeight="800"
-                        fontSize="$9"
+                        fontSize="$8"
                         lineHeight="$6"
                         textAlign="left"
                         color={Colors.light.blueLight}
@@ -43,7 +44,7 @@ const MindsetCard = () => {
                     </SizableText>
                     <SizableText
                         fontWeight="800"
-                        fontSize="$9"
+                        fontSize="$8"
                         lineHeight="$6"
                         textAlign="left"
                         mb={5}
@@ -51,13 +52,13 @@ const MindsetCard = () => {
                     >
                         dans un coprs sain.
                     </SizableText>
-                    <Button bg="#FFF" borderRadius={28} >
-                        <SizableText fontWeight="700" color={Colors.light.blueDark} fontSize={18}>
+                    <Button bg="#FFF" flex={1} borderRadius={28} >
+                        <SizableText textAlign="center" flex={1} fontWeight="700" color={Colors.light.blueDark} fontSize={16}>
                             Decouvrir
                         </SizableText>
                     </Button>
                 </YStack>
-                <YStack w="50%" borderRadius={20} bg={Colors.light.blueDark}  position="relative" overflow="hidden">
+                <YStack flex={1} borderRadius={20} bg={Colors.light.blueDark}  position="relative" overflow="hidden">
                     <YStack
                         position="absolute"
                         justifyContent="space-between"

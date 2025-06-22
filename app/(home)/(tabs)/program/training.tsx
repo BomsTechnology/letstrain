@@ -275,31 +275,34 @@ const Training = () => {
                 <Circuit datas={circuits}/>
 
                 <YStack px={20} gap={20}>
-                    <XStack bg="#EFEFEF" p={15} borderRadius={20} alignItems="center" justifyContent="space-between">
-                        <XStack alignItems="center" gap={20}>
-                            <View h={40} w={40} borderRadius={20} bg="#000" justifyContent="center"
+                    <XStack bg="#EFEFEF" p={15} borderRadius={20} alignItems="center"
+                            justifyContent="space-between">
+                        <XStack alignItems="center" gap={10}>
+                            <View h={30} w={30} borderRadius={20} bg="#000" justifyContent="center"
                                   alignItems="center">
-                                <SizableText fontSize="$8"
-                                             lineHeight="$8" color="#fff" fontWeight="700">2</SizableText>
+                                <SizableText fontSize="$5"
+                                             lineHeight="$5" color="#fff" fontWeight="700">2</SizableText>
                             </View>
                             <YStack>
-                                <SizableText color="#000" fontSize="$7"
+                                <SizableText color="#000" fontSize="$6"
                                              lineHeight="$1" fontWeight="700"
                                              numberOfLines={1}>RECUPERATION</SizableText>
-                                <SizableText color="#888888" fontSize="$6"
+                                <SizableText color="#888888" fontSize="$5"
                                              lineHeight="$1" fontWeight="500">5-10min</SizableText>
                             </YStack>
-                            <SizableText color="#000" fontSize="$7"
+                        </XStack>
+                        <XStack alignItems="center" gap={10}>
+                            <SizableText color="#000" fontSize="$5"
                                          lineHeight="$1" fontWeight="500">X-Xmin</SizableText>
+                            <View h={30} w={30} borderRadius={20} bg="#888888" justifyContent="center"
+                                  alignItems="center">
+                                <Ionicons name="play" size={15} color={Colors.light.background}/>
+                            </View>
                         </XStack>
 
-                        <View h={40} w={40} borderRadius={20} bg="#888888" justifyContent="center"
-                              alignItems="center">
-                            <Ionicons name="play" size={20} color={Colors.light.background}/>
-                        </View>
                     </XStack>
                     <XStack bg="#000" p={20} borderRadius={20} alignItems="center" justifyContent="center">
-                        <SizableText color="#fff" fontSize="$7" fontWeight="700" numberOfLines={1}>J’AI
+                        <SizableText color="#fff" fontSize="$6" fontWeight="700" numberOfLines={1}>J’AI
                             FINI MA SÉANCE </SizableText>
                         <AntDesign name="checkcircle" size={20} color={Colors.light.background}/>
                     </XStack>
@@ -310,7 +313,7 @@ const Training = () => {
                             end={{y: 1, x: 1}}
                             start={{x: 0.5, y: 0}}
                             style={styles.button}>
-                            <SizableText color="#fff" fontSize="$7"
+                            <SizableText color="#fff" fontSize="$6"
                                          fontWeight="700"
                                          numberOfLines={1}>🧠 J’ENTRAÎNE MON MENTAL</SizableText>
                         </LinearGradient>
